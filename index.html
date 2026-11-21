@@ -5,27 +5,27 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="description" content="Noticias, análisis y reviews de videojuegos y hardware." />
   <title>the netgame · Noticias y reviews</title>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Newsreader:opsz,wght@6..72,400;6..72,500;6..72,600&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="styles/style.css" />
+  <link rel="stylesheet" href="styles/base.css" />
+  <link rel="stylesheet" href="styles/layout.css" />
+  <link rel="stylesheet" href="styles/components.css" />
+  <link rel="stylesheet" href="styles/responsive.css" />
 </head>
 <body>
   <header class="site-header">
-    <div class="topbar container d-flex align-items-center gap-3">
-      <a class="brand" href="#">the netgame <span>•</span></a>
+    <div class="topbar container">
+      <a class="brand" href="index.html">the netgame <span>•</span></a>
       <p class="brand-note">News, reviews, and<br />hardware for the next<br />frame.</p>
-      <div class="header-actions d-flex align-items-center gap-3 ms-auto">
-        <button class="icon-button" aria-label="Buscar">⌕</button>
+      <div class="header-actions">
+        <button aria-label="Buscar">⌕</button>
         <a href="#">Mi cuenta</a>
         <span>⌄</span>
         <span>⚙</span>
       </div>
     </div>
-    <nav class="main-nav container d-flex align-items-center gap-4">
+
+    <nav class="main-nav container" aria-label="Navegación principal">
       <button class="menu-button" aria-label="Abrir menú">☰</button>
-      <a class="active" href="#">Home</a>
+      <a class="active" href="index.html">Home</a>
       <a href="noticias.html">News</a>
       <a href="#">Reviews</a>
       <a href="#">Hardware</a>
@@ -33,51 +33,52 @@
       <a href="#">Community</a>
       <a class="saved" href="#">♧ &nbsp; Noticias guardadas</a>
     </nav>
-    <div class="ticker container d-flex align-items-center gap-3">
+
+    <div class="ticker container">
       <span class="live">● EN DIRECTO</span>
       <span>Horizon Forbidden West: máquinas y mundo abierto</span>
       <span class="ticker-arrow">→</span>
-      <span>Actualizado hace 12 mins</span>
+      <span class="ticker-update">Actualizado hace 12 mins</span>
       <time>VIERNES, 5 DE NOVIEMBRE, 2026</time>
     </div>
   </header>
 
   <main class="container">
-    <section class="hero-layout section row g-4">
-      <article class="hero-story col-lg-8">
-        <p class="eyebrow">PORTADA DE JUEGOS</p>
-        <a href="#" class="image-link">
+    <section class="hero-layout section-grid">
+      <article class="hero-story">
+        <p class="section-label">PORTADA DE JUEGOS</p>
+        <a class="image-link" href="#">
           <div class="hero-image image-frame">
             <img src="https://picsum.photos/seed/horizon-world/1200/620" alt="Mundo de fantasía con máquinas y vegetación" />
             <span class="image-tag">RESEÑA DE JUEGO</span>
           </div>
         </a>
-        <p class="category">ANÁLISIS DE JUEGOS</p>
+        <p class="section-label">ANÁLISIS DE JUEGOS</p>
         <h1>“Horizon Forbidden West”: combate y exploración en un mundo salvaje.</h1>
         <p class="summary">Analizamos el viaje de Aloy, sus combates contra máquinas y su mundo abierto: una aventura de ciencia ficción que invita a explorar sin prisas.</p>
         <p class="byline">Por Priya Nair · 7 min de lectura <span>♧</span></p>
       </article>
 
-      <aside class="news-rail col-lg-4">
+      <aside class="news-rail">
         <div class="rail-heading">
           <h2>Noticias y reviews</h2>
           <span class="live">● EN DIRECTO</span>
         </div>
         <article class="rail-story">
-          <p class="meta">HACE 18 MIN <b>JUEGOS</b></p>
+          <p class="metadata">HACE 18 MIN <b>JUEGOS</b></p>
           <h3>Ghost of Tsushima: el viaje de Jin Sakai llega a PC con un mundo abierto y sus duelos de samuráis.</h3>
         </article>
         <article class="rail-story">
-          <p class="meta">HACE 14 MIN <b>HARDWARE</b></p>
+          <p class="metadata">HACE 14 MIN <b>HARDWARE</b></p>
           <h3>Una nueva GPU insignia promete más rendimiento con menos consumo, pero la diferencia real depende del juego.</h3>
         </article>
         <article class="rail-story">
-          <p class="meta">HACE 2 HORAS <b>JUEGOS</b></p>
+          <p class="metadata">HACE 2 HORAS <b>JUEGOS</b></p>
           <h3>Age of Empires IV combina estrategia en tiempo real, civilizaciones históricas y batallas en PC.</h3>
         </article>
-        <a href="#" class="more-link">Todas las últimas novedades&nbsp; →</a>
+        <a class="more-link" href="#">Todas las últimas novedades&nbsp; →</a>
         <div class="rail-note">
-          <p class="category">DESDE LA SALA DE JUEGOS</p>
+          <p class="section-label">DESDE LA SALA DE JUEGOS</p>
           <h3>Más gráficos. Más sensación de juego.</h3>
           <p>Nos centramos en juegos, reseñas y hardware que mejoran la experiencia de jugar.</p>
           <span>PN · 5 min de lectura</span>
@@ -85,69 +86,93 @@
       </aside>
     </section>
 
-    <section class="section review-section">
+    <section class="review-section section-grid">
       <div class="section-heading">
         <h2>Lo mejor para jugar</h2>
         <a href="#">Explora todas las reviews de juegos&nbsp; →</a>
       </div>
       <div class="filters">
-        <a class="selected" href="#">Todas las reviews de juegos</a>
-        <a href="#">PC</a><a href="#">Consola</a><a href="#">Periféricos</a><a href="#">Guías</a><a href="#">Deportes electrónicos</a>
+        <a class="active" href="#">Todas las reviews de juegos</a>
+        <a href="#">PC</a>
+        <a href="#">Consola</a>
+        <a href="#">Periféricos</a>
+        <a href="#">Guías</a>
       </div>
-      <div class="card-grid row g-4">
-        <article class="game-card col-lg-4">
-          <a href="#" class="image-link"><div class="card-image image-frame"><img src="https://picsum.photos/seed/elden-ring-landscape/800/480" alt="Paisaje de fantasía de Elden Ring" /></div></a>
-          <p class="category">JUEGOS</p>
+      <div class="card-grid">
+        <article class="game-card">
+          <a class="image-link" href="#"><div class="card-image image-frame"><img src="https://picsum.photos/seed/elden-ring-landscape/800/480" alt="Paisaje de fantasía de Elden Ring" /></div></a>
+          <p class="section-label">JUEGOS</p>
           <h3>“Elden Ring” convierte su mundo abierto en una aventura llena de desafíos.</h3>
           <p>Las Tierras Intermedias esconden secretos, mazmorras y jefes terribles. Acompáñanos cómo su libertad te ayuda a explorar cada paso de esta aventura.</p>
-          <span class="byline">Priya Nair · 6 min de lectura <i>♧</i></span>
+          <span class="byline">Priya Nair · 6 min de lectura ♧</span>
         </article>
-        <article class="game-card col-lg-4">
-          <a href="#" class="image-link"><div class="card-image image-frame"><img src="https://picsum.photos/seed/cyberpunk-city/800/480" alt="Ciudad futurista iluminada" /></div></a>
-          <p class="category">JUEGOS</p>
+        <article class="game-card">
+          <a class="image-link" href="#"><div class="card-image image-frame"><img src="https://picsum.photos/seed/cyberpunk-city/800/480" alt="Ciudad futurista iluminada" /></div></a>
+          <p class="section-label">JUEGOS</p>
           <h3>“Cyberpunk 2077” nos sumerge en la acción y las historias de Night City.</h3>
           <p>Implantes, bandas y decisiones que definen a V. Exploramos su propuesta de rol y acción en una metrópolis donde cada encargo cuenta una historia.</p>
-          <span class="byline">Ava Nguyen · 5 min de lectura <i>♧</i></span>
+          <span class="byline">Ava Nguyen · 5 min de lectura ♧</span>
         </article>
-        <article class="game-card col-lg-4">
-          <a href="#" class="image-link"><div class="card-image image-frame"><img src="https://picsum.photos/seed/baldurs-gate-party/800/480" alt="Grupo de aventureros en un paisaje fantástico" /></div></a>
-          <p class="category">JUEGOS</p>
+        <article class="game-card">
+          <a class="image-link" href="#"><div class="card-image image-frame"><img src="https://picsum.photos/seed/baldurs-gate-party/800/480" alt="Grupo de aventureros en un paisaje fantástico" /></div></a>
+          <p class="section-label">JUEGOS</p>
           <h3>“Baldur’s Gate 3” convierte cada decisión en una nueva historia de rol.</h3>
           <p>Combate por turnos, compañeros memorables y decisiones que transforman el viaje. Un RPG donde cada camino abre nuevas formas de vivir la aventura.</p>
-          <span class="byline">Ethan Park · 7 min de lectura <i>♧</i></span>
+          <span class="byline">Ethan Park · 7 min de lectura ♧</span>
         </article>
       </div>
     </section>
 
-    <section class="split-feature section row g-0">
-      <div class="split-copy col-lg-5">
-        <p class="category">LA JUGADA DEL FIN DE SEMANA</p>
+    <section class="split-feature">
+      <div class="split-copy">
+        <p class="section-label">LA JUGADA DEL FIN DE SEMANA</p>
         <h2>Por qué los mejores juegos son aquellos que dejan espacio para el descubrimiento.</h2>
         <p>De mundos abiertos hasta rompecabezas cooperativos, las experiencias más memorables suelen ser aquellas que recompensan la curiosidad y la exploración.</p>
         <span class="byline">Por David Nair · 12 min de lectura</span>
         <a class="more-link" href="#">Leer la historia&nbsp; →</a>
       </div>
-      <div class="split-image image-frame col-lg-7"><img src="https://picsum.photos/seed/futuristic-sunset/1000/700" alt="Ciudad futurista al atardecer" /></div>
+      <div class="split-image image-frame"><img src="https://picsum.photos/seed/futuristic-sunset/1000/700" alt="Ciudad futurista al atardecer" /></div>
     </section>
 
-    <div class="trends"><span>TENDENCIAS</span><a href="#">Juegos de acción&nbsp; ↗</a><a href="#">Juegos de rol&nbsp; ↗</a><a href="#">Juegos cooperativos&nbsp; ↗</a><a href="#">Lanzamientos de PC&nbsp; ↗</a></div>
+    <div class="trends">
+      <span>TENDENCIAS</span>
+      <a href="#">Juegos de acción&nbsp; ↗</a>
+      <a href="#">Juegos de rol&nbsp; ↗</a>
+      <a href="#">Juegos cooperativos&nbsp; ↗</a>
+      <a href="#">Lanzamientos de PC&nbsp; ↗</a>
+    </div>
   </main>
 
   <section class="newsletter">
-    <div class="container newsletter-inner row align-items-center g-4">
-      <div class="col-lg-6"><p class="category">NOTICIAS DIARIAS</p><h2>Las mejores noticias de Gaming y Hardware diariamente.</h2><p>Benchmarks enviados semanalmente.</p></div>
-      <form class="col-lg-6 row g-0"><label class="sr-only" for="email">Tu email</label><input class="col" id="email" type="email" placeholder="Escribe tu email" required /><button class="col-auto" type="submit">Dame noticias&nbsp; →</button><small class="col-12">No spam. Desuscríbete cuando quieras.</small></form>
+    <div class="newsletter-inner container">
+      <div>
+        <p class="section-label">NOTICIAS DIARIAS</p>
+        <h2>Las mejores noticias de Gaming y Hardware diariamente.</h2>
+        <p>Benchmarks enviados semanalmente.</p>
+      </div>
+      <form>
+        <label class="sr-only" for="email">Tu email</label>
+        <input id="email" type="email" placeholder="Escribe tu email" required />
+        <button type="submit">Dame noticias&nbsp; →</button>
+        <small>No spam. Desuscríbete cuando quieras.</small>
+      </form>
     </div>
   </section>
 
   <footer class="site-footer">
-    <div class="container footer-grid row g-4">
-      <div class="col-lg-6"><a class="brand" href="#">the netgame <span>•</span></a><p>Reseñas independientes. Al día con el hardware y software.</p></div>
-      <div class="col-6 col-lg-2"><p class="footer-title">SECCIONES</p><a href="#">Noticias</a><a href="#">Reviews</a><a href="#">Hardware</a><a href="#">Guías</a></div>
-      <div class="col-6 col-lg-2"><p class="footer-title">SOBRE NOSOTROS</p><a href="#">Nosotros</a><a href="#">El equipo</a><a href="#">Ética</a><a href="#">Contacto</a></div>
-      <div class="col-6 col-lg-2"><p class="footer-title">SÍGUENOS</p><a href="#">Newsletter</a><a href="#">YouTube</a><a href="#">Twitter</a><a href="#">Discord</a></div>
+    <div class="footer-grid container">
+      <div>
+        <a class="brand" href="index.html">the netgame <span>•</span></a>
+        <p>Reseñas independientes. Al día con el hardware y software.</p>
+      </div>
+      <div><p class="footer-title">SECCIONES</p><a href="#">Noticias</a><a href="#">Reviews</a><a href="#">Hardware</a></div>
+      <div><p class="footer-title">NOSOTROS</p><a href="#">El equipo</a><a href="#">Ética</a><a href="#">Contacto</a></div>
+      <div><p class="footer-title">SÍGUENOS</p><a href="#">YouTube</a><a href="#">Twitter</a><a href="#">Discord</a></div>
     </div>
-    <div class="container footer-bottom"><span>© 2026 The Current. Todos los derechos reservados.</span><span>Política de privacidad &nbsp;&nbsp; Términos de uso &nbsp;&nbsp; Documentación de Accesibilidad</span></div>
+    <div class="footer-bottom container">
+      <span>© 2026 The Current. Todos los derechos reservados.</span>
+      <span>Privacidad &nbsp;&nbsp; Términos &nbsp;&nbsp; Accesibilidad</span>
+    </div>
   </footer>
 </body>
 </html>

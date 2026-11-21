@@ -33,19 +33,33 @@
   </header>
 
   <main class="container section-grid">
-    <p class="section-label">PORTADA DE JUEGOS</p>
-    <article class="hero-layout">
-      <div class="hero-story">
-        <div class="hero-image image-frame">
-          <img src="https://picsum.photos/seed/horizon-world/1200/620" alt="Mundo de fantasía con máquinas y vegetación" />
-          <span class="image-tag">RESEÑA DE JUEGO</span>
-        </div>
-        <p class="section-label">ANÁLISIS DE JUEGOS</p>
-        <h1>“Horizon Forbidden West”: combate y exploración en un mundo salvaje.</h1>
-        <p class="summary">Analizamos el viaje de Aloy, sus combates contra máquinas y su mundo abierto: una aventura de ciencia ficción que invita a explorar sin prisas.</p>
-        <p class="byline">Por Priya Nair · 7 min de lectura</p>
+    <div id="article-not-found" hidden>
+      <p class="section-label">ARTÍCULO NO ENCONTRADO</p>
+      <h1>Esta noticia no existe o ya no está disponible.</h1>
+      <a class="more-link" href="index.html">Volver al inicio&nbsp; →</a>
+    </div>
+
+    <article id="article-content" class="article-page">
+      <p class="section-label" id="article-category"></p>
+      <h1 id="article-page-title"></h1>
+      <p class="article-summary" id="article-summary"></p>
+      <div class="article-meta">
+        <span id="article-author"></span>
+        <span id="article-reading-time"></span>
+        <time id="article-date"></time>
       </div>
+      <div class="article-image image-frame">
+        <img id="article-image" src="" alt="" />
+      </div>
+      <div class="article-body" id="article-body"></div>
     </article>
+
+    <section class="related-section">
+      <div class="section-heading"><h2>Más noticias</h2></div>
+      <div class="card-grid" id="related-articles"></div>
+    </section>
   </main>
+  <script src="scripts/articles.js"></script>
+  <script src="scripts/article.js"></script>
 </body>
 </html>

@@ -59,4 +59,12 @@
     flex-direction: column;
     gap: 8px;
   }
+
+  .article-page h1 {
+    font-size: 34px;
+  }
+
+  .article-body {
+    font-size: 18px;
+  }
 }

@@ -36,7 +36,7 @@
 
     <div class="ticker container">
       <span class="live">● EN DIRECTO</span>
-      <span>Horizon Forbidden West: máquinas y mundo abierto</span>
+      <span id="ticker-title">Horizon Forbidden West: máquinas y mundo abierto</span>
       <span class="ticker-arrow">→</span>
       <span class="ticker-update">Actualizado hace 12 mins</span>
       <time>VIERNES, 5 DE NOVIEMBRE, 2026</time>
@@ -45,37 +45,14 @@
 
   <main class="container">
     <section class="hero-layout section-grid">
-      <article class="hero-story">
-        <p class="section-label">PORTADA DE JUEGOS</p>
-        <a class="image-link" href="#">
-          <div class="hero-image image-frame">
-            <img src="https://picsum.photos/seed/horizon-world/1200/620" alt="Mundo de fantasía con máquinas y vegetación" />
-            <span class="image-tag">RESEÑA DE JUEGO</span>
-          </div>
-        </a>
-        <p class="section-label">ANÁLISIS DE JUEGOS</p>
-        <h1>“Horizon Forbidden West”: combate y exploración en un mundo salvaje.</h1>
-        <p class="summary">Analizamos el viaje de Aloy, sus combates contra máquinas y su mundo abierto: una aventura de ciencia ficción que invita a explorar sin prisas.</p>
-        <p class="byline">Por Priya Nair · 7 min de lectura <span>♧</span></p>
-      </article>
+      <article class="hero-story" id="featured-story"></article>
 
       <aside class="news-rail">
         <div class="rail-heading">
           <h2>Noticias y reviews</h2>
           <span class="live">● EN DIRECTO</span>
         </div>
-        <article class="rail-story">
-          <p class="metadata">HACE 18 MIN <b>JUEGOS</b></p>
-          <h3>Ghost of Tsushima: el viaje de Jin Sakai llega a PC con un mundo abierto y sus duelos de samuráis.</h3>
-        </article>
-        <article class="rail-story">
-          <p class="metadata">HACE 14 MIN <b>HARDWARE</b></p>
-          <h3>Una nueva GPU insignia promete más rendimiento con menos consumo, pero la diferencia real depende del juego.</h3>
-        </article>
-        <article class="rail-story">
-          <p class="metadata">HACE 2 HORAS <b>JUEGOS</b></p>
-          <h3>Age of Empires IV combina estrategia en tiempo real, civilizaciones históricas y batallas en PC.</h3>
-        </article>
+        <div id="news-rail"></div>
         <a class="more-link" href="#">Todas las últimas novedades&nbsp; →</a>
         <div class="rail-note">
           <p class="section-label">DESDE LA SALA DE JUEGOS</p>
@@ -98,41 +75,10 @@
         <a href="#">Periféricos</a>
         <a href="#">Guías</a>
       </div>
-      <div class="card-grid">
-        <article class="game-card">
-          <a class="image-link" href="#"><div class="card-image image-frame"><img src="https://picsum.photos/seed/elden-ring-landscape/800/480" alt="Paisaje de fantasía de Elden Ring" /></div></a>
-          <p class="section-label">JUEGOS</p>
-          <h3>“Elden Ring” convierte su mundo abierto en una aventura llena de desafíos.</h3>
-          <p>Las Tierras Intermedias esconden secretos, mazmorras y jefes terribles. Acompáñanos cómo su libertad te ayuda a explorar cada paso de esta aventura.</p>
-          <span class="byline">Priya Nair · 6 min de lectura ♧</span>
-        </article>
-        <article class="game-card">
-          <a class="image-link" href="#"><div class="card-image image-frame"><img src="https://picsum.photos/seed/cyberpunk-city/800/480" alt="Ciudad futurista iluminada" /></div></a>
-          <p class="section-label">JUEGOS</p>
-          <h3>“Cyberpunk 2077” nos sumerge en la acción y las historias de Night City.</h3>
-          <p>Implantes, bandas y decisiones que definen a V. Exploramos su propuesta de rol y acción en una metrópolis donde cada encargo cuenta una historia.</p>
-          <span class="byline">Ava Nguyen · 5 min de lectura ♧</span>
-        </article>
-        <article class="game-card">
-          <a class="image-link" href="#"><div class="card-image image-frame"><img src="https://picsum.photos/seed/baldurs-gate-party/800/480" alt="Grupo de aventureros en un paisaje fantástico" /></div></a>
-          <p class="section-label">JUEGOS</p>
-          <h3>“Baldur’s Gate 3” convierte cada decisión en una nueva historia de rol.</h3>
-          <p>Combate por turnos, compañeros memorables y decisiones que transforman el viaje. Un RPG donde cada camino abre nuevas formas de vivir la aventura.</p>
-          <span class="byline">Ethan Park · 7 min de lectura ♧</span>
-        </article>
-      </div>
+      <div class="card-grid" id="article-grid"></div>
     </section>
 
-    <section class="split-feature">
-      <div class="split-copy">
-        <p class="section-label">LA JUGADA DEL FIN DE SEMANA</p>
-        <h2>Por qué los mejores juegos son aquellos que dejan espacio para el descubrimiento.</h2>
-        <p>De mundos abiertos hasta rompecabezas cooperativos, las experiencias más memorables suelen ser aquellas que recompensan la curiosidad y la exploración.</p>
-        <span class="byline">Por David Nair · 12 min de lectura</span>
-        <a class="more-link" href="#">Leer la historia&nbsp; →</a>
-      </div>
-      <div class="split-image image-frame"><img src="https://picsum.photos/seed/futuristic-sunset/1000/700" alt="Ciudad futurista al atardecer" /></div>
-    </section>
+    <section class="split-feature" id="weekend-feature"></section>
 
     <div class="trends">
       <span>TENDENCIAS</span>
@@ -174,5 +120,14 @@
       <span>Privacidad &nbsp;&nbsp; Términos &nbsp;&nbsp; Accesibilidad</span>
     </div>
   </footer>
+    <script src="scripts/articles.js"></script>
+    <script src="scripts/home.js"></script>
 </body>
 </html>
+
+<!--
+TODO: accesibilidad → menu de ajustes con overlay para modo oscuro, modo sepia
+TODO: cambio de idioma
+TODO: hacer mejor los textos y hacer con otros idiomas
+TODO: ver el resto de funcionalidades y añadirlas
+-->
